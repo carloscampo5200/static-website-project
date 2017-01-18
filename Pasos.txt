@@ -1,0 +1,25 @@
+Pasos para subir el repositorio a Google Cloud
+
+*El nombre del directorio del proyecto debe ser el mismo Project ID
+
+1. Seleccionar repositorio como git - Usando git init localmente
+
+2. Clonar repositorio 
+
+Push code from a local Git repository to your Cloud Repository
+
+Choose this option if you have existing code in a local Git repository.
+Select your preferred authentication method: 
+Google Cloud SDK (recommended)
+
+Install Google Cloud SDK
+Use the following commands to authenticate:
+Windows
+gcloud init
+git config credential.helper gcloud.cmd
+
+Add your Cloud Repository as a remote:
+git remote add google https://source.developers.google.com/p/static-website-project/r/python-static-website-project
+
+Push from your local Git repository:
+git push --all google
